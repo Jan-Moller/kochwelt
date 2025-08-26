@@ -7,18 +7,13 @@
     <title>Kochwelt</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="fonts.css">
+    <script src="script.js"></script>
 </head>
 
-<body>
-    <header>
-        <a href="index.html"><img src="assets/img/logo2.png" alt="Bild einer Kochmütze mit Schriftzug Kochwelt"></a>
-        <nav>
-            <a href="index.html">Start</a>
-            <a href="#">Rezept des Tages</a>
-            <a href="#">Kontakt</a>
-            <a href="#">Impressum</a>
-        </nav>
-    </header>
+<body onload="includeHTML()">
+
+    <div w3-include-html="templates/header.html"></div>
+
     <main>
         <section class="receipt_otd">
             <img src="assets/img/burger.jpg" alt="Bild eines Burgers">
@@ -28,27 +23,27 @@
                     Darauf schmelzender Cheddar, karamellisierte Zwiebeln und frische Tomaten sorgen für den perfekten
                     Geschmackskontrast. Abgerundet wird der Burger mit einer cremigen BBQ-Sauce, die jedem Bissen eine
                     rauchig-süße Note verleiht.</p>
-                <button class="mg_top48">Rezept öffnen</button>
+                <a href="receipt.html" class="receipt_btn mg_top48" onclick="saveReceipt('burger')">Rezept öffnen</a>
             </div>
         </section>
         <section class="multiple_receipts_section">
             <h2>Lust auf was Neues?</h2>
             <div class="multiple_receipt_links">
-                <a href="">
+                <a href="receipt.html" onclick="saveReceipt('croissants')">
                     <figure>
                         <img src="assets/img/croissant.jpg" alt="Bild eines Croissants">
                         <figcaption>Französischer Croissant</figcaption>
                     </figure>
 
                 </a>
-                <a href="">
+                <a href="receipt.html" onclick="saveReceipt('pasta')">
                     <figure>
                         <img src="assets/img/pasta.jpg" alt="Bild eines Nudelgerichts">
                         <figcaption>Italienische Pasta</figcaption>
                     </figure>
 
                 </a>
-                <a href="">
+                <a href="receipt.html" onclick="saveReceipt('greek_salad')">
                     <figure>
                         <img src="assets/img/salad.jpg" alt="Bild eines Salates">
                         <figcaption>Griechischer Salat</figcaption>
@@ -72,7 +67,7 @@
     </main>
 
     <footer>
-        
+
     </footer>
 
 

@@ -3,6 +3,11 @@ body {
     font-family: 'Raleway';
 }
 
+h1 {
+    margin-block-start: 0;
+    margin-block-end: 0;
+}
+
 h2 {
     color: black;
     margin-bottom: 32px;
@@ -83,7 +88,9 @@ nav a:hover::before {
     text-align: justify;
 }
 
-button {
+.receipt_btn {
+    display: flex;
+    justify-content: center;
     background-color: green;
     color: white;
     border: none;
@@ -157,4 +164,89 @@ button {
 footer {
     height: 300px;
     background-color: #403B3B;
+}
+
+.receipt_header {
+    display: flex;
+    flex-direction: column;
+    margin: 50px 150px 0 150px;
+    gap: 32px;
+    padding-bottom: 75px;
+    border-bottom: 1px solid rgb(241 237 237);
+}
+
+.receipt_header_img {
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.receipt_info_short {
+    display: flex;
+    gap: 20px;
+}
+
+.receipt_info_short_item {
+    display: flex;
+    background-color: #EFEFEF;
+    align-items: center;
+    gap: 10px;
+    padding: 5px 10px;
+    border-radius: 10px;
+}
+
+.receipt_header_icon {
+    height: 15px;
+    width: 15px;
+    object-fit: cover;
+}
+
+.receipt_ingredients_section {
+    padding: 5px 150px 75px 150px;
+    color: #403B3B
+}
+
+.receipt_ingredients_section input {
+    height: 39px;
+    border: 1px solid rgba(0, 0, 0, 0.15);
+    border-radius: 10px 0 0 10px;
+    padding: 0;
+    margin-left: 5px;
+}
+
+.receipt_ingredients_section input:focus {
+    outline: none;
+}
+
+.amount_people_ingredients_btn {
+    height: 40px !important;
+    background-color: green;
+    color: white;
+    font-size: 16px;
+    width: 150px;
+    border-radius: 0 !important;
+    font-family: 'Raleway';
+    margin: 0 !important;
+    cursor: pointer;
+}
+
+.amount_people_form {
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px; 
+}
+
+table {
+    width: 100%;
+    border-radius: 10px;
+}
+
+
+td {
+    padding: 15px 32px;
+    border-radius: 10px;
+}
+
+tr:nth-child(odd) {
+    background-color: #EFEFEF;
 }
