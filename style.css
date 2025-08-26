@@ -1,0 +1,160 @@
+body {
+    margin: 0;
+    font-family: 'Raleway';
+}
+
+h2 {
+    color: black;
+    margin-bottom: 32px;
+}
+
+p {
+    margin-block-start: 0;
+}
+
+.mg_top48 {
+    margin-top: 48px;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100px;
+    padding: 0 150px;
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+}
+
+header img {
+    height: 75px;
+    object-fit: cover;
+}
+
+nav {
+    height: 100%;
+    display: flex;
+    align-items: flex-end;
+    font-size: 14px;
+    font-weight: bold;
+    gap: 18px;
+}
+
+nav a {
+    padding-bottom: 8px;
+    text-decoration: none;
+    color: gray;
+    position: relative;
+}
+
+nav a:hover {
+    color: green;
+}
+
+nav a:hover::before {
+    content: "";
+    position: absolute;
+    border-bottom: 4px solid green;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+}
+
+.receipt_otd {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 50px 150px 75px 150px;
+}
+
+.receipt_otd img {
+    height: 300px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.receipt_otd_description {
+    display: flex;
+    flex-direction: column;
+    max-height: 150px;
+    margin-left: 36px;
+    color: gray;
+    font-size: 14px;
+    text-align: justify;
+}
+
+button {
+    background-color: green;
+    color: white;
+    border: none;
+    font-size: 14px;
+    padding: 15px;
+    width: 225px;
+}
+
+.multiple_receipts_section {
+    background-color: #EFEFEF;
+    padding: 50px 150px 75px 150px;
+    text-align: center;
+}
+
+.multiple_receipt_links {
+    display: flex;
+    justify-content: space-between;
+    gap: 48px;
+}
+
+.multiple_receipt_links a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    width: 20%;
+}
+
+.multiple_receipt_links figure {
+    margin-block-start: 0;
+    margin-block-end: 0;
+    margin-inline-start: 0;
+    margin-inline-end: 0;
+}
+
+.multiple_receipt_links img {
+    width: 100%;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.receipt_trend_section {
+    padding: 50px 150px 75px 150px;
+}
+
+.receipt_trend_section h2 {
+    text-align: center;
+}
+
+.receipt_trend_section article {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+    width: 100%;
+}
+
+.receipt_trend_section img {
+    width: 20%;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.receipt_trend_section p {
+    padding-top: 16px;
+    width: 80%;
+    margin-right: 36px;
+    text-align: justify;
+}
+
+footer {
+    height: 300px;
+    background-color: #403B3B;
+}
