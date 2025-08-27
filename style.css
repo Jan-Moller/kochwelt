@@ -1,6 +1,20 @@
 body {
     margin: 0;
     font-family: 'Raleway';
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+main {
+    flex: 1;
+}
+
+.contact_main_section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 75px;
 }
 
 h1 {
@@ -21,7 +35,7 @@ p {
     margin-top: 48px;
 }
 
-header {
+.header {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -30,7 +44,7 @@ header {
     box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
 }
 
-header img {
+.header img {
     height: 75px;
     object-fit: cover;
 }
@@ -97,6 +111,7 @@ nav a:hover::before {
     font-size: 14px;
     padding: 15px;
     width: 225px;
+    text-decoration: none;
 }
 
 .multiple_receipts_section {
@@ -210,7 +225,7 @@ footer {
     height: 39px;
     border: 1px solid rgba(0, 0, 0, 0.15);
     border-radius: 10px 0 0 10px;
-    padding: 0;
+    padding-left: 5px;
     margin-left: 5px;
 }
 
@@ -233,7 +248,7 @@ footer {
 .amount_people_form {
     display: flex;
     align-items: center;
-    margin-bottom: 5px; 
+    margin-bottom: 5px;
 }
 
 table {
@@ -249,4 +264,67 @@ td {
 
 tr:nth-child(odd) {
     background-color: #EFEFEF;
+}
+
+.contact_form {
+    display: flex;
+    flex-direction: column;
+    width: 500px;
+    gap: 12px;
+}
+
+.contact_form input {
+    height: 25px;
+    padding: 10px 15px;
+    font-family: 'Raleway';
+    border: 1px solid rgb(206, 201, 201);
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+
+.contact_form input::placeholder {
+    font-family: 'Raleway';
+}
+
+.contact_form textarea {
+    resize: none;
+    height: 150px;
+    padding-left: 15px;
+    padding-top: 10px;
+    font-family: 'Raleway';
+    border: 1px solid rgb(206, 201, 201);
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+
+.contact_form textarea:focus {
+    outline: none;
+
+}
+
+.contact_form textarea::placeholder {
+    font-family: 'Raleway';
+}
+
+.contact_form input:focus {
+    outline: none;
+}
+
+.contact_subheader {
+    margin-top: 20px; 
+    text-align: center;
+}
+
+.contact_submit_btn {
+    height: 50px !important;
+    display: flex;
+    justify-content: center;
+    background-color: green;
+    color: white;
+    border: none;
+    font-size: 14px;
+    padding: 15px;
+    text-decoration: none;
+    cursor: pointer;
+    margin-bottom: 20px;
+    margin-top: 20px; 
+     box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 }

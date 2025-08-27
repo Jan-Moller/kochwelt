@@ -1,3 +1,4 @@
+const receipt_menus = ['greek_salad', 'burger', 'pasta', 'croissants']
 const receipts = {
     greek_salad: {
         name: "Griechischer Salad",
@@ -97,7 +98,8 @@ function saveReceipt(receipt) {
     localStorage.setItem("receipt", receipt)
 }
 
-function initReceipt() {
+async function initReceipt() {
+    await includeHTML(); 
     let receipt = localStorage.getItem("receipt");
     renderReceiptHeader(receipt);
     renderReceiptIngredients(receipt);
@@ -121,17 +123,17 @@ function renderReceiptIngredients(receipt) {
     let content = document.getElementById('receipt_ingredients_section');
     let form = generateFormReceiptIngredients();
     let table = generateIngredientsTable(receipt);
-    let item = receipts[receipt];
     content.innerHTML = /*html*/ `
         <div>${form}</div>
-        <table>${table}</table>
+        <table id="table">${table}</table>
 `
 }
 
 function generateFormReceiptIngredients() {
-    return /*html*/`<form class="amount_people_form" onsubmit="alert('Klappt')" action="">
+    return /*html*/`
+    <form class="amount_people_form"  onsubmit="event.preventDefault(), calcReceiptAmount()">
         <label for="number_people">Zutaten für</label>
-        <input type="number" min="1"  id="number_people" value="1" required>
+        <input type="number" min="1"  id="number_people" value="2" required>
         <input class="amount_people_ingredients_btn" type="submit" value="Portionen">
     </form>`
 }
@@ -148,4 +150,62 @@ function generateIngredientsTable(receipt) {
             </tr>`
     }
     return content;
+}
+
+function calcReceiptAmount() {
+    let receipt = localStorage.getItem("receipt");
+    let item = receipts[receipt];
+    let default_value = document.getElementById('number_people').defaultValue;
+    let value = document.getElementById('number_people').value;
+    for (let index = 0; index < item.amounts.length; index++) {
+        let amount = item.amounts[index];
+        let current_amount = amount / default_value;
+        let new_amount = current_amount * value;
+        if (new_amount == 0) {
+            new_amount = '';
+            item.amounts[index] = new_amount;
+        }
+        else { item.amounts[index] = new_amount; }
+    }
+    document.getElementById('number_people').defaultValue = value;
+    newIngredientsTable(receipt);
+}
+
+function newIngredientsTable(receipt) {
+    let table = document.getElementById('table')
+    let item = receipts[receipt];
+    let content = '';
+    for (let i = 0; i < item.ingredients.length; i++) {
+        const ingredient = item.ingredients[i];
+        const amount = item.amounts[i];
+        content += /*html*/`
+            <tr>
+            <td>${amount} ${ingredient}</td> 
+            </tr>`
+    }
+    table.innerHTML = content;
+}
+
+function openDailyReceipt() {
+    let today = new Date();
+    let day = String(today.getDate()).padStart(2, '0');
+    let indexToShow = day % receipt_menus.length;
+    localStorage.setItem("receipt", receipt_menus[indexToShow])
+}
+
+function sendMail(event){﻿
+    event.preventDefault();
+    const data = new FormData(event.target);
+
+    fetch("https://formspree.io/f/mblaldnk", {
+        method: "POST",
+        body: new FormData(event.target),
+        headers: {
+            'Accept': 'application/json'
+        }
+    }).then(() => {
+        window.location.href = "./send_mail.html";
+    }).catch((error) => {
+        console.log(error);
+    });
 }
