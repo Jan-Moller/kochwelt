@@ -42,6 +42,24 @@ p {
     height: 100px;
     padding: 0 150px;
     box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    background-color: white;
+    z-index: 1;
+}
+
+.header_placeholder {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100px;
+    padding: 0 150px;
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+    top: 0;
+    right: 0;
+    left: 0;
 }
 
 .header img {
@@ -83,7 +101,7 @@ nav a:hover::before {
     display: flex;
     justify-content: flex-start;
     align-items: flex-start;
-    padding: 50px 150px 75px 150px;
+    padding: 50px 150px 50px 150px;
 }
 
 .receipt_otd img {
@@ -95,7 +113,6 @@ nav a:hover::before {
 .receipt_otd_description {
     display: flex;
     flex-direction: column;
-    max-height: 150px;
     margin-left: 36px;
     color: gray;
     font-size: 14px;
@@ -365,4 +382,147 @@ tr:nth-child(odd) {
 
 .main_imprint {
     padding: 10px 100px 10px 100px
+}
+
+.small_header_logo {
+    display: none;
+}
+
+.burger_menu_img {
+    height: 25px !important;
+    display: none;
+}
+
+.menu_overlay {
+    display: none;
+}
+
+@media (max-width: 1135px) {
+    .mg_top48 {
+        margin-top: 20px;
+    }
+}
+
+@media (max-width: 925px) {
+    .receipt_otd {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .receipt_otd_description {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        margin-left: 0;
+    }
+
+    .large_header_logo {
+        display: none;
+    }
+
+    .small_header_logo {
+        display: flex;
+        height: 40px !important;
+        object-fit: cover !important;
+    }
+
+    .receipt_otd {
+        padding: 50px 100px 25px 100px;
+    }
+
+    .multiple_receipts_section {
+        padding: 50px 100px 25px 100px !important;
+    }
+
+    .multiple_receipt_links img {
+        height: 300px;
+    }
+
+    .receipt_trend_section {
+        padding: 50px 100px 25px 100px !important;
+    }
+
+    .receipt_trend_section article {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .receipt_trend_section p {
+        padding-top: 16px;
+        text-align: justify;
+        margin-right: 0;
+        width: 100%;
+    }
+
+    .receipt_trend_section img {
+        height: 300px;
+        width: 100%;
+        aspect-ratio: 1/1;
+        object-fit: cover;
+        border-radius: 10px;
+    }
+}
+
+@media (max-width: 750px) {
+
+    .header nav {
+        display: none;
+    }
+
+    .burger_menu_img {
+        display: block;
+    }
+
+    .menu_overlay {
+        display: flex;
+        position: fixed;
+        top: 0;
+        right: 0;
+        transform: translateX(100%);
+        box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+        transition: all 200ms ease-in-out;
+    }
+
+    nav {
+        height: auto;
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        justify-content: space-evenly;
+        font-size: 14px;
+        font-weight: bold;
+        background-color: white;
+        height: 100vh;
+    }
+
+    .open_menu_overlay {
+        transform: translateY(0) !important;
+    }
+
+
+    .multiple_receipt_links {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    figure {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+    }
+
+    figcaption {
+        font-size: 20px;
+    }
+
+    .multiple_receipt_links a {
+        width: 100%;
+    }
 }

@@ -254,3 +254,8 @@ function generateReceiptUserData(receipt) {
     receipt_user_img_element.src = receipt_item.receipt_user_img; 
 
 }
+
+function openMenu() {
+    let nav = document.getElementById('open_menu_nav');
+    nav.classList.toggle('open_menu_overlay');
+}

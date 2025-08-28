@@ -1,9 +1,20 @@
+<div class="header_placeholder"></div>
 <div class="header">
-    <a href="index.html"><img src="assets/img/logo2.png" alt="Bild einer Kochmütze mit Schriftzug Kochwelt"></a>
+    <a href="index.html"><img class="small_header_logo" src="assets/img/logo_small.png"
+            alt="Bild einer Kochmütze mit Schriftzug Kochwelt"></a>
+    <a href="index.html"><img class="large_header_logo" src="assets/img/logo2.png"
+            alt="Bild einer Kochmütze mit Schriftzug Kochwelt"></a>
     <nav>
         <a href="index.html">Start</a>
         <a onclick="openDailyReceipt()" href="receipt.html">Rezept des Tages</a>
         <a href="contact.html">Kontakt</a>
         <a href="imprint.html">Impressum</a>
     </nav>
+    <img onclick="openMenu()" class="burger_menu_img" src="/assets/icons/menu_bars.png" alt="Bild zum öffnen eines Menüs">
 </div>
+<nav id="open_menu_nav" class="menu_overlay">
+    <a href="index.html">Start</a>
+    <a onclick="openDailyReceipt()" href="receipt.html">Rezept des Tages</a>
+    <a href="contact.html">Kontakt</a>
+    <a href="imprint.html">Impressum</a>
+</nav>
