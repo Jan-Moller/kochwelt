@@ -17,9 +17,29 @@
     <main>
         <section class="receipt_header" id="receipt_header"></section>
         <section class="receipt_ingredients_section" id="receipt_ingredients_section"></section>
+        <section class="receipt_description_section">
+            <h2>Zubereitung</h2>
+            <div class="receipt_info_short">
+                <div class="receipt_info_short_item">
+                    <img class="receipt_header_icon" src="assets/icons/clock-regular.svg" alt="Bild einer Uhr">
+                    <span id="prepare_time">1 Min</span><span>Vorbereitung</span>
+                </div>
+                <div class="receipt_info_short_item">
+                    <img class="receipt_header_icon" src="assets/icons/clock-regular.svg" alt="Bild einer Uhr">
+                    <span id="total_time">1 Min</span><span>Zubereitung gesamt</span>
+                </div>
+            </div>
+            <p id="receipt_instruction"></p>
+            <h3>Rezept erstellt von</h3>
+            <div class="receipt_user_section">
+                <img id="receipt_user_img" src="" alt="Bild des Rezepterstellers">
+                <address id="receipt_user"></address>
+            </div>
+
+        </section>
     </main>
 
-     <footer w3-include-html="templates/footer.html"></footer>
+    <footer w3-include-html="templates/footer.html"></footer>
 
 </body>
 

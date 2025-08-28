@@ -217,7 +217,7 @@ footer {
 }
 
 .receipt_ingredients_section {
-    padding: 5px 150px 75px 150px;
+    padding: 5px 150px 15px 150px;
     color: #403B3B
 }
 
@@ -309,8 +309,9 @@ tr:nth-child(odd) {
 }
 
 .contact_subheader {
-    margin-top: 20px; 
+    margin-top: 20px;
     text-align: center;
+    color: gray;
 }
 
 .contact_submit_btn {
@@ -325,6 +326,43 @@ tr:nth-child(odd) {
     text-decoration: none;
     cursor: pointer;
     margin-bottom: 20px;
-    margin-top: 20px; 
-     box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    margin-top: 20px;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+
+.receipt_description_section {
+    padding: 5px 150px 15px 150px;
+}
+
+#receipt_instruction {
+    margin-top: 30px;
+    text-align: justify;
+}
+
+.receipt_user_section {
+    display: flex;
+    font-size: 32px;
+    gap: 35px;
+    align-items: center;
+}
+
+.receipt_user_section img {
+    height: 250px;
+    width: 250px;
+    object-fit: cover;
+    border-radius: 1000px;
+}
+
+.contact_feedback_main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.contact_feedback_header {
+    text-align: center;
+}
+
+.main_imprint {
+    padding: 10px 100px 10px 100px
 }
