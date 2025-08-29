@@ -194,7 +194,7 @@ nav a:hover::before {
 }
 
 footer {
-    height: 300px;
+    height: 200px;
     background-color: #403B3B;
 }
 
@@ -468,12 +468,17 @@ tr:nth-child(odd) {
 
 @media (max-width: 750px) {
 
+    .header {
+        padding: 0 50px;
+    }
+
     .header nav {
         display: none;
     }
 
     .burger_menu_img {
         display: block;
+        cursor: pointer;
     }
 
     .menu_overlay {
@@ -524,5 +529,91 @@ tr:nth-child(odd) {
 
     .multiple_receipt_links a {
         width: 100%;
+    }
+
+    .receipt_header {
+        margin: 50px 100px 0 100px;
+    }
+
+    .receipt_ingredients_section {
+        padding: 5px 100px 15px 100px;
+    }
+
+    .receipt_description_section {
+        padding: 5px 100px 15px 100px;
+    }
+}
+
+@media (max-width: 600px) {
+    .receipt_info_short {
+        flex-direction: column;
+    }
+
+    .amount_people_form {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .receipt_ingredients_section input {
+        height: 39px;
+        border: 1px solid rgba(0, 0, 0, 0.15);
+        border-radius: 10px;
+        padding-left: 5px;
+        margin-left: 0;
+        width: 200px;
+    }
+
+    .receipt_header {
+        padding-bottom: 25px;
+    }
+
+    .contact_form input {
+        width: 250px;
+    }
+
+    .contact_form textarea {
+        width: 264px;
+    }
+
+    .contact_form {
+    align-items: center;
+}
+
+.main_imprint {
+    padding: 10px 20px 10px 20px;
+}
+}
+
+@media (max-width: 500px) {
+    .receipt_otd img {
+        height: 200px;
+    }
+
+    .receipt_otd {
+        padding: 50px 50px 25px 50px;
+    }
+
+    .multiple_receipts_section {
+        padding: 50px 50px 25px 50px !important;
+    }
+
+    .receipt_trend_section {
+        padding: 50px 50px 25px 50px !important;
+    }
+
+    .receipt_header {
+        margin: 50px 50px 0 50px;
+    }
+
+    .receipt_ingredients_section {
+        padding: 5px 50px 15px 50px;
+    }
+
+    .receipt_description_section {
+        padding: 5px 50px 15px 50px;
+    }
+
+    .receipt_user_section {
+        flex-direction: column;
     }
 }

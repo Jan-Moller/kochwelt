@@ -18,9 +18,9 @@
         <p class="contact_subheader">Du hast Fragen oder Feedback? <br>Dann schreibe uns gerne!</p>
         <form onsubmit="sendMail(event)" class="contact_form">
             <label for="name"></label>
-            <input placeholder="Dein Name" type="text" id="name" name="name">
+            <input placeholder="Dein Name" type="text" id="name" name="name" required>
             <label for="mail"></label>
-            <input placeholder="Deine Emailadresse" type="email" name="email" id="mail">
+            <input placeholder="Deine Emailadresse" type="email" name="email" id="mail" required>
             <label for="message"></label>
             <textarea placeholder="Deine Nachricht" name="message" id="message"></textarea>
             <input class="contact_submit_btn" type="submit" name="submit" >
